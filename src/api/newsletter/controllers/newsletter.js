@@ -46,7 +46,7 @@ module.exports = createCoreController('api::newsletter.newsletter', ({ strapi })
   
       // Configure API key authorization: api-key
       const apiKey = defaultClient.authentications['api-key'];
-      apiKey.apiKey = "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"
+      apiKey.apiKey = process.env.BREVO_API
   
       const apiInstance = new Brevo.ContactsApi();
   
