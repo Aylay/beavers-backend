@@ -6,12 +6,12 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::contact.contact', ({ strapi }) => ({
+module.exports = createCoreController('api::contact.contact', () => ({
   async create(ctx) {
     const response = await super.create(ctx);
 
     const { WebClient, LogLevel } = require("@slack/web-api");
-    const client = new WebClient("xoxb-935577478768-5572702963187-4ija2HjBTCInL1Q77UQjbiDw", {
+    const client = new WebClient(process.env.STRAPI_XOXB, {
       logLevel: LogLevel.DEBUG
     });
 
