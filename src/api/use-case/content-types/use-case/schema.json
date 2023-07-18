@@ -71,7 +71,8 @@
       "displayName": "texts",
       "type": "component",
       "repeatable": true,
-      "component": "common.texts"
+      "component": "common.texts",
+      "required": true
     },
     "img1": {
       "type": "media",
