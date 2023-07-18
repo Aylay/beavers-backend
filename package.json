@@ -10,7 +10,8 @@
     "strapi": "strapi"
   },
   "devDependencies": {
-    "@getbrevo/brevo": "^1.0.1"
+    "@getbrevo/brevo": "^1.0.1",
+    "pg": "^8.11.1"
   },
   "dependencies": {
     "@slack/web-api": "^6.8.1",
