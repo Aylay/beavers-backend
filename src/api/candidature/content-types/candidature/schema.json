@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "candidatures",
+  "info": {
+    "singularName": "candidature",
+    "pluralName": "candidatures",
+    "displayName": "candidature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "linkedIn": {
+      "type": "string"
+    },
+    "portfolio": {
+      "type": "string"
+    },
+    "cv": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "job": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::job.job",
+      "inversedBy": "candidatures"
+    },
+    "jobTitle": {
+      "type": "string"
+    }
+  }
+}

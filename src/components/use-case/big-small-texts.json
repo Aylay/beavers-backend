@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_use_case_big_small_texts",
+  "info": {
+    "displayName": "bigSmallTexts"
+  },
+  "options": {},
+  "attributes": {
+    "text1": {
+      "type": "string"
+    },
+    "text2": {
+      "type": "string"
+    }
+  }
+}

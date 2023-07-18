@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_common_content_managers",
+  "info": {
+    "displayName": "contentManager"
+  },
+  "options": {},
+  "attributes": {
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "texte + texte",
+        "texte + image",
+        "image + texte",
+        "texte",
+        "image",
+        "iframe"
+      ]
+    },
+    "text1": {
+      "type": "richtext"
+    },
+    "text2": {
+      "type": "richtext"
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "iframe": {
+      "type": "text"
+    }
+  }
+}

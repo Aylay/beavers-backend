@@ -1,0 +1,124 @@
+{
+  "kind": "collectionType",
+  "collectionName": "use_cases",
+  "info": {
+    "singularName": "use-case",
+    "pluralName": "use-cases",
+    "displayName": "useCase",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.meta",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mainImg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "intro": {
+      "type": "text",
+      "required": true
+    },
+    "duration": {
+      "type": "string",
+      "required": true
+    },
+    "techLever": {
+      "type": "string",
+      "required": true
+    },
+    "website": {
+      "type": "string",
+      "required": true
+    },
+    "context": {
+      "type": "richtext",
+      "required": true
+    },
+    "needs": {
+      "type": "richtext",
+      "required": true
+    },
+    "goals": {
+      "displayName": "texts",
+      "type": "component",
+      "repeatable": true,
+      "component": "common.texts"
+    },
+    "img1": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img2": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "actions": {
+      "type": "richtext",
+      "required": true
+    },
+    "resultText": {
+      "type": "text",
+      "required": true
+    },
+    "results": {
+      "displayName": "bigSmallTexts",
+      "type": "component",
+      "repeatable": true,
+      "component": "use-case.big-small-texts"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categorie.categorie",
+      "inversedBy": "useCases"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "useCases"
+    },
+    "resultDisplayed": {
+      "type": "component",
+      "repeatable": false,
+      "component": "use-case.big-small-texts"
+    }
+  }
+}
