@@ -22,9 +22,5 @@ module.exports = ({ env }) => ({
         defaultReplyTo: env('EMAIL_ADDRESS_REPLY'),
       },
     },
-  },
-  'content-export-import': {
-    enabled: true,
-    resolve: './src/plugins/content-export-import' // path to plugin folder
-  },
+  }
 });
