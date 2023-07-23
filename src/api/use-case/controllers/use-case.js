@@ -6,8 +6,6 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::use-case.use-case');
-
 module.exports = createCoreController('api::use-case.use-case', ({ strapi }) => ({
   async findOne(ctx) {
     const { slug } = ctx.params;
