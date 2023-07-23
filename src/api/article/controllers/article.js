@@ -6,17 +6,19 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::article.article', ({ strapi }) => ({
-  async findOne(ctx) {
-    const { slug } = ctx.params;
+module.exports = createCoreController('api::article.article');
 
-    const query = {
-      filters: { slug },
-      ...ctx.query,
-    };
+// module.exports = createCoreController('api::article.article', ({ strapi }) => ({
+//   async findOne(ctx) {
+//     const { slug } = ctx.params;
 
-    const article = await strapi.entityService.findMany("api::article.article", query);
+//     const query = {
+//       filters: { slug },
+//       ...ctx.query,
+//     };
 
-    return this.transformResponse(article[0]);
-  }
-}))
+//     const article = await strapi.entityService.findMany("api::article.article", query);
+
+//     return this.transformResponse(article[0]);
+//   }
+// }))
