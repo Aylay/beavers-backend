@@ -120,6 +120,21 @@
       "type": "component",
       "repeatable": false,
       "component": "use-case.big-small-texts"
+    },
+    "imgBg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "imgSite": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
