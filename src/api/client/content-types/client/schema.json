@@ -32,6 +32,14 @@
       "relation": "oneToMany",
       "target": "api::use-case.use-case",
       "mappedBy": "client"
+    },
+    "imgBg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

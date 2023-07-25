@@ -121,20 +121,13 @@
       "repeatable": false,
       "component": "use-case.big-small-texts"
     },
-    "imgBg": {
-      "allowedTypes": [
-        "images"
-      ],
+    "imgSite": {
       "type": "media",
       "multiple": false,
-      "required": true
-    },
-    "imgSite": {
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
