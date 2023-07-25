@@ -34,12 +34,16 @@
       "mappedBy": "client"
     },
     "imgBg": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logoColor": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
