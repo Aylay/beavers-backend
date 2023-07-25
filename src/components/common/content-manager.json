@@ -1,7 +1,8 @@
 {
   "collectionName": "components_common_content_managers",
   "info": {
-    "displayName": "contentManager"
+    "displayName": "contentManager",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -23,14 +24,18 @@
       "type": "richtext"
     },
     "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "iframe": {
       "type": "text"
+    },
+    "legend": {
+      "type": "richtext"
     }
   }
 }
