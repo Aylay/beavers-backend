@@ -57,7 +57,7 @@
     },
     "website": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "context": {
       "type": "richtext",
