@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@slack/web-api": "^6.8.1",
-    "@strapi/plugin-i18n": "4.12.4",
-    "@strapi/plugin-users-permissions": "4.12.4",
-    "@strapi/provider-email-nodemailer": "^4.12.4",
-    "@strapi/strapi": "4.12.4",
+    "@strapi/plugin-i18n": "4.12.5",
+    "@strapi/plugin-users-permissions": "4.12.5",
+    "@strapi/provider-email-nodemailer": "^4.12.5",
+    "@strapi/strapi": "4.12.5",
     "better-sqlite3": "8.0.1",
     "strapi-plugin-populate-deep": "^2.0.0"
   },
