@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agences",
+  "info": {
+    "singularName": "agence",
+    "pluralName": "agences",
+    "displayName": "agence",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.meta",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "intro": {
+      "type": "text",
+      "required": true
+    },
+    "words": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.texts",
+      "required": true
+    },
+    "contentManager": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.content-manager"
+    }
+  }
+}

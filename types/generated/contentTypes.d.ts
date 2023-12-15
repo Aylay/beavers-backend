@@ -677,6 +677,43 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAgenceAgence extends Schema.CollectionType {
+  collectionName: 'agences';
+  info: {
+    singularName: 'agence';
+    pluralName: 'agences';
+    displayName: 'agence';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    meta: Attribute.Component<'layout.meta'> & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::agence.agence', 'title'>;
+    subTitle: Attribute.String & Attribute.Required;
+    intro: Attribute.Text & Attribute.Required;
+    words: Attribute.Component<'common.texts', true> & Attribute.Required;
+    contentManager: Attribute.Component<'common.content-manager', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::agence.agence',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::agence.agence',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Schema.CollectionType {
   collectionName: 'articles';
   info: {
@@ -1073,6 +1110,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::agence.agence': ApiAgenceAgence;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::candidature.candidature': ApiCandidatureCandidature;
