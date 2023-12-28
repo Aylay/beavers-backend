@@ -14,14 +14,17 @@ export interface CommonContentManager extends Schema.Component {
         'image + texte',
         'texte',
         'image',
-        'iframe'
+        'iframe',
+        'citation'
       ]
-    >;
+    > &
+      Attribute.Required;
     text1: Attribute.RichText;
     text2: Attribute.RichText;
     img: Attribute.Media;
     iframe: Attribute.Text;
     legend: Attribute.RichText;
+    citation: Attribute.Text;
   };
 }
 

@@ -14,8 +14,10 @@
         "image + texte",
         "texte",
         "image",
-        "iframe"
-      ]
+        "iframe",
+        "citation"
+      ],
+      "required": true
     },
     "text1": {
       "type": "richtext"
@@ -36,6 +38,9 @@
     },
     "legend": {
       "type": "richtext"
+    },
+    "citation": {
+      "type": "text"
     }
   }
 }
