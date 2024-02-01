@@ -109,6 +109,8 @@ module.exports = createCoreController('api::candidature.candidature', () => ({
     catch (error) {
       console.error(error);
     }
+
+    return response;
   }
 }))
 

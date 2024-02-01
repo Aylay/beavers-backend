@@ -87,5 +87,7 @@ module.exports = createCoreController('api::contact.contact', () => ({
     catch (error) {
       console.error(error);
     }
+
+    return response;
   }
 }))
