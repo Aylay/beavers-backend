@@ -1,5 +1,19 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ClientAvis extends Schema.Component {
+  collectionName: 'components_client_avis';
+  info: {
+    displayName: 'avis';
+    description: '';
+  };
+  attributes: {
+    prenom: Attribute.String;
+    nom: Attribute.String;
+    note: Attribute.Integer & Attribute.Required;
+    commentaire: Attribute.RichText;
+  };
+}
+
 export interface CommonContentManager extends Schema.Component {
   collectionName: 'components_common_content_managers';
   info: {
@@ -64,6 +78,7 @@ export interface UseCaseBigSmallTexts extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'client.avis': ClientAvis;
       'common.content-manager': CommonContentManager;
       'common.texts': CommonTexts;
       'layout.meta': LayoutMeta;

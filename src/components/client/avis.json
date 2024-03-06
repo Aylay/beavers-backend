@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_client_avis",
+  "info": {
+    "displayName": "avis",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "prenom": {
+      "type": "string"
+    },
+    "nom": {
+      "type": "string"
+    },
+    "note": {
+      "type": "integer",
+      "required": true
+    },
+    "commentaire": {
+      "type": "richtext"
+    }
+  }
+}

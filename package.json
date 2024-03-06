@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@slack/web-api": "^6.8.1",
-    "@strapi/plugin-i18n": "4.16.2",
-    "@strapi/plugin-users-permissions": "4.16.2",
-    "@strapi/provider-email-nodemailer": "^4.16.2",
-    "@strapi/strapi": "4.16.2",
+    "@strapi/plugin-i18n": "4.20.4",
+    "@strapi/plugin-users-permissions": "4.20.4",
+    "@strapi/provider-email-nodemailer": "^4.20.4",
+    "@strapi/strapi": "4.20.4",
     "better-sqlite3": "8.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -32,7 +32,7 @@
     "uuid": "f072fec4-010f-44b5-8a90-889ac3f53d70"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
+    "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
