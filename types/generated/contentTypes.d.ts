@@ -807,6 +807,11 @@ export interface ApiAgenceAgence extends Schema.CollectionType {
     intro: Attribute.Text & Attribute.Required;
     words: Attribute.Component<'common.texts', true> & Attribute.Required;
     contentManager: Attribute.Component<'common.content-manager', true>;
+    useCases: Attribute.Relation<
+      'api::agence.agence',
+      'oneToMany',
+      'api::use-case.use-case'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

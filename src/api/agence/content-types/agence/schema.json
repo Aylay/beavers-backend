@@ -44,6 +44,11 @@
       "type": "component",
       "repeatable": true,
       "component": "common.content-manager"
+    },
+    "useCases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::use-case.use-case"
     }
   }
 }
