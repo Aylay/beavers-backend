@@ -39,6 +39,7 @@ export interface CommonContentManager extends Schema.Component {
     iframe: Attribute.Text;
     legend: Attribute.RichText;
     citation: Attribute.Text;
+    IA: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 

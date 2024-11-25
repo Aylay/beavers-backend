@@ -70,6 +70,10 @@
       "repeatable": true,
       "component": "common.texts",
       "required": true
+    },
+    "IA": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

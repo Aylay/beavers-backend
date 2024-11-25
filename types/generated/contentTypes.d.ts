@@ -862,6 +862,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     contentManager: Attribute.Component<'common.content-manager', true> &
       Attribute.Required;
     words: Attribute.Component<'common.texts', true> & Attribute.Required;
+    IA: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

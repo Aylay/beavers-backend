@@ -41,6 +41,10 @@
     },
     "citation": {
       "type": "text"
+    },
+    "IA": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
