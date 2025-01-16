@@ -40,6 +40,8 @@ export interface CommonContentManager extends Schema.Component {
     legend: Attribute.RichText;
     citation: Attribute.Text;
     IA: Attribute.Boolean & Attribute.DefaultTo<false>;
+    link: Attribute.String;
+    ctaLabel: Attribute.String;
   };
 }
 

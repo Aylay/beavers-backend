@@ -45,6 +45,12 @@
     "IA": {
       "type": "boolean",
       "default": false
+    },
+    "link": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
     }
   }
 }
