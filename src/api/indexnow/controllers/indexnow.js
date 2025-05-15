@@ -4,6 +4,7 @@ const axios = require('axios');
 const INDEXNOW_KEY = '3d7b78ca41ac4ae280c192f24909f889';
 const SITE_URL = 'https://beavers-agency.fr';
 const HOST = 'beavers-agency.fr';
+const SECRET_TOKEN = '90EK4z3N8bh918NhIl2qcbc6'; // Ton token secret
 const TIME_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
 
 const MODELS = [
@@ -31,6 +32,12 @@ const MODELS = [
 
 module.exports = {
   async trigger(ctx) {
+    const incomingToken = ctx.request.headers['x-vercel-token'];
+
+    if (incomingToken !== SECRET_TOKEN) {
+      return ctx.unauthorized(`🔒 Invalid token`);
+    }
+    
     const now = Date.now();
     const from = new Date(now - TIME_WINDOW_MS);
 
