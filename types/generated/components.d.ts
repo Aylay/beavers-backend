@@ -1,26 +1,31 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
 export interface ClientAvis extends Schema.Component {
   collectionName: 'components_client_avis';
   info: {
-    displayName: 'avis';
     description: '';
+    displayName: 'avis';
   };
   attributes: {
-    prenom: Attribute.String;
+    commentaire: Attribute.RichText;
     nom: Attribute.String;
     note: Attribute.Integer & Attribute.Required;
-    commentaire: Attribute.RichText;
+    prenom: Attribute.String;
   };
 }
 
 export interface CommonContentManager extends Schema.Component {
   collectionName: 'components_common_content_managers';
   info: {
-    displayName: 'contentManager';
     description: '';
+    displayName: 'contentManager';
   };
   attributes: {
+    citation: Attribute.Text;
+    ctaLabel: Attribute.String;
+    IA: Attribute.Boolean & Attribute.DefaultTo<false>;
+    iframe: Attribute.Text;
+    img: Attribute.Media<'images'>;
     layout: Attribute.Enumeration<
       [
         'texte + texte',
@@ -33,15 +38,10 @@ export interface CommonContentManager extends Schema.Component {
       ]
     > &
       Attribute.Required;
+    legend: Attribute.RichText;
+    link: Attribute.String;
     text1: Attribute.RichText;
     text2: Attribute.RichText;
-    img: Attribute.Media;
-    iframe: Attribute.Text;
-    legend: Attribute.RichText;
-    citation: Attribute.Text;
-    IA: Attribute.Boolean & Attribute.DefaultTo<false>;
-    link: Attribute.String;
-    ctaLabel: Attribute.String;
   };
 }
 
@@ -61,9 +61,9 @@ export interface LayoutMeta extends Schema.Component {
     displayName: 'meta';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     description: Attribute.Text & Attribute.Required;
-    ogImage: Attribute.Media;
+    ogImage: Attribute.Media<'images'>;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
