@@ -4,7 +4,7 @@ const axios = require('axios');
 const INDEXNOW_KEY = '3d7b78ca41ac4ae280c192f24909f889';
 const SITE_URL = 'https://beavers-agency.fr';
 const HOST = 'beavers-agency.fr';
-const TIME_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+const TIME_WINDOW_MS = 60 * 60 * 1000; // 60 minutes
 
 const MODELS = [
   {
