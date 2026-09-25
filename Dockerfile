@@ -21,6 +21,11 @@ RUN yarn build
 # ---------- Étape 2 : image finale ----------
 FROM node:20-bookworm-slim
 
+# curl, utilisé par le healthcheck
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends curl \
+  && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /opt/app
 ENV NODE_ENV=production
 
@@ -33,5 +38,10 @@ RUN mkdir -p /opt/app/public/uploads && chown -R node:node /opt/app/public/uploa
 
 USER node
 EXPOSE 1337
+
+# Strapi répond sur /_health dès qu'il est prêt. Tant que ce test échoue,
+# Coolify garde l'ancienne version en ligne.
+HEALTHCHECK --interval=10s --timeout=5s --start-period=60s --retries=5 \
+  CMD curl -fs http://localhost:1337/_health || exit 1
 
 CMD ["yarn", "start"]
